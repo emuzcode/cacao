@@ -1,0 +1,313 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('./fonts/craftmincho.otf') format('opentype');
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+h1 {
+  font-family: 'MyCustomFont', sans-serif; /* フォントの適用 */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* ヘッダーの高さを指定 */
+  background-color: #EEEEEE;
+  /* color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 24px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* ヘッダーを最前面に表示 */
+}
+
+header img {
+  width: 36px;
+  height: 36px;
+}
+
+main {
+  margin-top: 60px; /* ヘッダーの高さ分だけ余白を追加 */
+  padding: 24px;
+  color: #222831; /* Text color */
+  background-color: #EEEEEE; /* 背景色を設定（任意） */
+}
+
+.mv {
+  width: 100%;
+  display: flex;
+
+  flex-direction: column; /* コンテンツを縦並びにする */
+  align-items: center; /* 中央に揃える */
+  justify-content: center; /* 縦方向でも中央に揃える */
+  height: 48vh; /* セクション全体を画面の高さにする */
+  text-align: center; /* テキストを中央揃え */
+  padding: 24px; /* 内側の余白を追加 */
+}
+
+.mv img {
+  width: 128px;
+  height: 128px;
+}
+
+.mv h2 {
+  font-size: 2.0em; /* 見出しのフォントサイズ */
+  margin-bottom: 20px; /* 見出しの下に余白を追加 */
+}
+
+.mv p {
+  font-size: 1.2em; /* 段落のフォントサイズ */
+  margin-bottom: 15px; /* 段落の下に余白を追加 */
+}
+
+/* レスポンシブに対応し、画面中央に配置 */
+.question {
+  max-width: 600px; /* セクションの最大幅 */
+  margin: 0 auto; /* 水平方向の中央揃え */
+  padding: 20px; /* セクション内の余白 */
+  background-color: #f9f9f9; /* 背景色 */
+  border-radius: 10px; /* 角を丸める */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける */
+}
+
+/* テーブルのスタイルをレスポンシブに対応 */
+.question table {
+  width: 100%; /* テーブルを親要素の幅に合わせる */
+  border-collapse: collapse; /* セルの間の境界線をなくす */
+  margin-bottom: 20px; /* テーブル下に余白 */
+}
+
+/* テーブルヘッダーのスタイル */
+.question th {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.question th:first-child {
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.question th:last-child {
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+}
+
+/* テーブルデータセルのスタイル */
+.question td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* セルの下に境界線 */
+  font-size: 14px;
+}
+
+.question td:not(:first-child) {
+  text-align: center;
+}
+
+/* テキスト入力フィールドのスタイル */
+.question input[type="number"] {
+  width: 100%; /* 入力フィールドの幅を100%に */
+  padding: 8px;
+  box-sizing: border-box; /* paddingを含めた幅にする */
+  border: 1px solid #ccc; /* 境界線の色 */
+  border-radius: 5px; /* 角を丸める */
+  font-size: 14px;
+}
+
+/* ボタンのスタイル */
+.question button {
+  width: 100%; /* ボタンを親要素の幅に合わせる */
+  padding: 10px;
+  background-color: #4CAF50; /* ボタンの背景色 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer; /* カーソルをポインタに */
+}
+
+/* ボタンホバー時のスタイル */
+.question button:hover {
+  background-color: #45a049;
+}
+
+/* 小さな画面サイズの対応 */
+@media (max-width: 480px) {
+  .question th, .question td {
+      font-size: 12px; /* フォントサイズを小さく */
+  }
+
+  .question input[type="number"] {
+      font-size: 12px; /* 入力フィールドのフォントサイズを小さく */
+  }
+
+  .question button {
+      font-size: 14px; /* ボタンのフォントサイズを小さく */
+  }
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.result h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.result table {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+.result table th,
+.result table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.result table th {
+  background-color: #f4f4f4;
+}
+
+.result canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.evidence {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.evidence code {
+  display: block;
+  padding: 0.1em 0.25em; /* 文字周りの余白 */
+  color: #444; /* 文字色 */
+  background-color: #e7edf3; /* 背景色 */
+  border-radius: 3px; /* 角丸 */
+  border: solid 1px #d6dde4; /* 枠線 */
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .result {
+      padding: 10px;
+  }
+
+  .result h2 {
+      font-size: 1.5em;
+  }
+
+  .result table {
+      max-width: 100%;
+  }
+}
+
+footer {
+  background-color: #333; /* フッターの背景色 */
+  color: #fff; /* テキストの色 */
+  text-align: center; /* テキストを中央揃え */
+  padding: 20px; /* 内側の余白 */
+  font-size: 0.9em; /* フォントサイズ */
+}
+
+footer p {
+  margin: 10px 0; /* 各段落の上下の余白 */
+}
+
+footer a {
+  color: #FFD700; /* リンクの色（ゴールド） */
+  text-decoration: none; /* リンクの下線を削除 */
+}
+
+footer a:hover {
+  text-decoration: underline; /* リンクにマウスオーバーした時に下線を表示 */
+}
+
+footer p:last-child {
+  margin-top: 20px; /* 最後の段落の上部余白 */
+  font-size: 0.8em; /* コピーライトのフォントサイズを少し小さく */
+}
+
+@media (max-width: 600px) {
+  footer {
+      font-size: 0.8em; /* 小さな画面サイズでフォントを縮小 */
+      padding: 15px; /* 小さな画面サイズでパディングを縮小 */
+  }
+}
+
+/* デフォルトのカラム幅 */
+col:nth-child(1) {
+  width: 70%;
+}
+
+col:nth-child(2) {
+  width: 20%;
+}
+
+col:nth-child(3) {
+  width: 10%;
+}
+
+/* 画面幅が768px以下の場合 */
+@media (max-width: 768px) {
+  col:nth-child(1) {
+      width: 50%; /* カラム1の幅を60%に変更 */
+  }
+
+  col:nth-child(2) {
+      width: 30%; /* カラム2の幅を30%に変更 */
+  }
+
+  col:nth-child(3) {
+      width: 20%; /* カラム3の幅を10%に変更 */
+  }
+}
+
+/* 画面幅が480px以下の場合 */
+@media (max-width: 480px) {
+  col:nth-child(1) {
+      width: 50%; /* カラム1の幅を50%に変更 */
+  }
+
+  col:nth-child(2) {
+      width: 30%; /* カラム2の幅を40%に変更 */
+  }
+
+  col:nth-child(3) {
+      width: 20%; /* カラム3の幅を10%に変更 */
+  }
+}
+

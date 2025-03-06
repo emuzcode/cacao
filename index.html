@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Description of the document -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noarchive">
+
+    <title>カカオの方程式</title>
+    <meta name="description" content="カカオと砂糖の比率を簡単に計算。理想のカカオ％を計算するためのBean to Bar専用ツール。カカオの悩みを解決。">
+    <link rel="canonical" href="https://emuzcode.github.io/chocolate/">
+    <meta property="og:site_name" content="カカオの方程式">
+    <meta property="og:title" content="トップページ">
+    <meta property="og:description" content="カカオと砂糖の比率を簡単に計算。理想のカカオ％を計算するためのBean to Bar専用ツール。カカオの悩みを解決。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://emuzcode.github.io/chocolate/">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/beanbar-logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/beanbar-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/beanbar-logo.png">
+    <link rel="manifest" href="./img/site.webmanifest">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./scripts/libs.js" defer></script>
+    <script async type="text/javascript" charset="utf-8" src="http://localhost:3000/common.js?service-token=0c57d79f406070d0e4ebdc50085ba2a4a88cbf5a"></script>
+</head>
+
+<body>
+  <header>
+    <div><img src="./img/beanbar-logo.png"></div>
+  </header>
+  <main>
+    <section class="mv">
+      <div><img src="./img/beanbar-logo.png"></div>
+      <h2>カカオの方程式</h2>
+      <p>あなたの理想のカカオ比率を計算する、Bean to Bar のための専用ツール</p>
+    </section>
+    <section class="question">
+      <table>
+        <colgroup>
+          <col>
+          <col>
+          <col>
+        </colgroup>
+        <thead> <!-- テーブルのヘッダー -->
+          <tr> <!-- テーブルの行 -->
+            <th>項目</th> <!-- テーブルのヘッダーセル -->
+            <th>入力</th>
+            <th>単位</th>
+          </tr>
+        </thead>
+        <tbody> <!-- テーブルの本体 -->
+          <tr>
+            <td>カカオ豆の量は何グラムですか？</td> <!-- テーブルのデータセル -->
+            <td><input type="number" id="cacaoAmount" placeholder="例: 1500" required maxlength="6" size="8" value="1500" /></td>
+            <td>g</td>
+          </tr>
+          <tr>
+            <td>カカオ何％のチョコレートにしますか？</td> <!-- テーブルのデータセル -->
+            <td><input type="number" id="cacaoPercent" placeholder="例: 60" required maxlength="6" size="8" value="60" /></td>
+            <td>%</td>
+          </tr>
+          <tr>
+            <td>ミルクパウダー（その他）は全体の何%に設定しますか？</td> <!-- テーブルのデータセル -->
+            <td><input type="number" id="otherPercent" placeholder="例: 14" required maxlength="6" size="8" value="14" /></td>
+            <td>%</td>
+          </tr>
+          <tr>
+            <td>ミルクパウダー（その他）に対して何％のカカオバターを入れますか？</td> <!-- テーブルのデータセル -->
+            <td><input type="number" id="cacaoButterPercent" placeholder="例: 50" required maxlength="6" size="8" value="50" /></td>
+            <td>%</td>
+          </tr>
+        </tbody>
+      </table>
+      <button onclick="calculate()">計算する</button>
+    </section>
+    <section class="result">
+      <h2>結果</h2>
+      <div id="result">※こちらに結果が表示されます</div>
+      <canvas id="resultPieChart"></canvas>
+    </section>
+    <section class="evidence">
+      <details>
+        <summary>計算式</summary>
+        <div id="evidenceResult">※こちらに結果が表示されます</div>
+        <a href="easter_egg.html"><button>Easter Egg</button></a>
+      </details>
+    </section>
+  </main>
+  <footer>
+    <p>
+      CHICHIBU CHOCOLATE FACTORYへのご連絡は、<a href="https://www.instagram.com/chichibu.chocolate.factory/" target="_blank" rel="nofollow noreferrer">Instagram</a> からお願いいたします。
+    </p>
+    <p>&copy; 2024 カカオの方程式.</p>
+  </footer>
+
+  <script src="./scripts/main.js" defer></script>
+</body>
+
+</html>
