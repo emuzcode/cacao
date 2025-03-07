@@ -1,0 +1,27 @@
+{
+  "name": "カカオの方程式",
+  "short_name": "カカオ計算",
+  "description": "カカオと砂糖の比率を簡単に計算。理想のカカオ％を計算するためのBean to Bar専用ツール。",
+  "start_url": "/cacao",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8B4513",
+  "icons": [
+    {
+      "src": "./img/beanbar-logo-180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "./img/beanbar-logo-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./img/beanbar-logo-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
