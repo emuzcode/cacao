@@ -23,8 +23,15 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 
+    <!-- Chart.js & DataLabels Plugin CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+    <!-- Custom Scripts -->
     <script src="./scripts/libs.js" defer></script>
-    <script async type="text/javascript" charset="utf-8" src="http://localhost:3000/common.js?service-token=0b74f7002cf26c7d61428f17b79bff4d19fb99f8"></script>
+    <script src="./scripts/main.js" defer></script>
+</head>
+
 <body>
   <header>
     <div><img src="./img/beanbar-logo.png"></div>
@@ -72,7 +79,7 @@
           </tr>
         </tbody>
       </table>
-      <button onclick="calculate()">計算する</button>
+      <button id="calculateBtn" onclick="calculate()" disabled>計算する</button>
     </section>
     <section class="result">
       <h2>結果</h2>
@@ -93,8 +100,5 @@
     </p>
     <p>&copy; 2024 カカオの方程式.</p>
   </footer>
-
-  <script src="./scripts/main.js" defer></>
 </body>
-
 </html>
