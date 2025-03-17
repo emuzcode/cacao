@@ -45,6 +45,23 @@ function calculate() {
 
     document.getElementById("result").innerHTML = resultHTML;
 
+    // 計算式の説明を表示
+    let evidenceHTML = `
+        <h3>計算プロセス</h3>
+        <p>1. カカオ総量: <strong>${cacaoAmount}g</strong></p>
+        <p>2. 設定したカカオ%: <strong>${cacaoPercent}%</strong></p>
+        <p>3. ミルクパウダー（その他）の割合: <strong>${otherPercent}%</strong></p>
+        <p>4. ミルクパウダーに対するカカオバター比率: <strong>${cacaoButterPercent}%</strong></p>
+        <p>5. 1%あたりの総量計算: <strong>${gramsPerPercent.toFixed(2)}g</strong></p>
+        <p>6. カカオの量: <strong>${resultCacaoAmount}g</strong> = ${gramsPerPercent.toFixed(2)} × (${cacaoPercent} - ${otherPercent} ÷ (100 ÷ ${cacaoButterPercent}))</p>
+        <p>7. カカオバターの量: <strong>${resultCacaoButter}g</strong> = ${gramsPerPercent.toFixed(2)} × (${otherPercent} ÷ (100 ÷ ${cacaoButterPercent}))</p>
+        <p>8. 砂糖の量: <strong>${resultSugarAmount}g</strong> = ${gramsPerPercent.toFixed(2)} × (100 - ((${cacaoPercent} - ${otherPercent} ÷ (100 ÷ ${cacaoButterPercent})) + (${otherPercent} ÷ (100 ÷ ${cacaoButterPercent})) + ${otherPercent}))</p>
+        <p>9. その他の量: <strong>${resultOtherAmount}g</strong> = ${gramsPerPercent.toFixed(2)} × ${otherPercent}</p>
+        <p><strong>合計: ${resultTotal}g</strong></p>
+    `;
+
+    document.getElementById("evidenceResult").innerHTML = evidenceHTML;
+
     let ctx = document.getElementById('resultPieChart').getContext('2d');
     if (pieChart) {
         pieChart.destroy();
