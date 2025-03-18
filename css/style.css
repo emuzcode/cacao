@@ -311,3 +311,18 @@ col:nth-child(3) {
   }
 }
 
+.easter {
+  height: 1080px;
+  position: relative; /* 親要素を relative に */
+  display: flex;
+  justify-content: center; /* 水平方向中央揃え */
+}
+
+.easter button {
+  position: absolute;
+  bottom: 0; /* 下部に配置 */
+  left: 50%;
+  transform: translateX(-50%); /* 完全に中央に */
+  padding: 10px 20px;
+  font-size: 16px;
+}
