@@ -2,7 +2,7 @@
 <html lang="ja">
 
 <head>
-  <!-- Description of the document -->
+  <!-- Meta Information -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +10,35 @@
 
   <title>カカオの方程式</title>
   <meta name="description" content="カカオと砂糖の比率を簡単に計算。理想のカカオ％を計算するためのBean to Bar専用ツール。カカオの悩みを解決。">
-  <link rel="canonical" href="https://emuzcode.github.io/cacao">
+  <link rel="canonical" href="https://beantobar.site">
+
+  <!-- OGP (Open Graph Protocol) -->
   <meta property="og:site_name" content="カカオの方程式">
   <meta property="og:title" content="トップページ">
   <meta property="og:description" content="カカオと砂糖の比率を簡単に計算。理想のカカオ％を計算するためのBean to Bar専用ツール。カカオの悩みを解決。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://emuzcode.github.io/cacao">
-  <link rel="apple-touch-icon" sizes="180x180" href="./img/beanbar-logo.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./img/beanbar-logo.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./img/beanbar-logo.png">
-  <link rel="manifest" href="./public/site.webmanifest">
+  <meta property="og:url" content="https://beantobar.site">
+  <meta property="og:image" content="https://beantobar.site/img/beanbar-logo-512.png">
+
+  <!-- Twitter Card (Optional) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://beantobar.site/img/beanbar-logo-512.png">
+
+  <!-- Favicon & Icons -->
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="180x180" href="./img/beanbar-logo-180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/beanbar-logo-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./img/beanbar-logo-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/beanbar-logo-180.png">
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="./site.webmanifest">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
 
-  <!-- Chart.js & DataLabels Plugin CDN -->
+  <!-- Chart.js & Plugin -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
@@ -31,11 +46,12 @@
   <script src="./scripts/libs.js" defer></script>
   <script src="./scripts/main.js" defer></script>
 
+  <!-- Tracking -->
   <!-- <script async type="text/javascript" charset="utf-8" src="http://localhost:3000/common.js?service-token=e58e65ff1bb049e252aa7e7b3b6ef48155d51209"></script> -->
-  <script async type="text/javascript" charset="utf-8" src="https://feature.client.sitelead.net/common.js?service-token=d36fa99db8271e8488faca0a397e1135f0bf3540"></script>
+  <!-- <script async type="text/javascript" charset="utf-8" src="https://feature.client.sitelead.net/common.js?service-token=d36fa99db8271e8488faca0a397e1135f0bf3540"></script> -->
   <!-- <script async type="text/javascript" charset="utf-8" src="https://client.sitelead.net/common.js?service-token=c3359e0a7de7e86437cfc70088da5c031bb03c00"></script> -->
   <!-- 有料 -->
-  <!-- <script async type="text/javascript" charset="utf-8" src="https://client.sitelead.net/common.js?service-token=28490d8f4c3a633739de7261df6295f186cfe3b7"></script> -->
+  <script async type="text/javascript" charset="utf-8" src="https://client.sitelead.net/common.js?service-token=28490d8f4c3a633739de7261df6295f186cfe3b7"></script>
 </head>
 
 <body>
@@ -97,7 +113,7 @@
         <summary>計算式</summary>
         <div id="evidenceResult">※こちらに結果が表示されます</div>
         <div class="easter">
-          <a href="easter_egg.html"><button>go to top page</button></a>
+          <a href="./easter-egg/"><button>go to easter egg page</button></a>
         </div>
       </details>
     </section>
