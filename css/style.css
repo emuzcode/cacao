@@ -312,17 +312,27 @@ col:nth-child(3) {
 }
 
 .easter {
-  height: 1080px;
-  position: relative; /* 親要素を relative に */
-  display: flex;
-  justify-content: center; /* 水平方向中央揃え */
+  margin-top: 20px;
+  text-align: center;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
 }
 
-.easter button {
-  position: absolute;
-  bottom: 0; /* 下部に配置 */
-  left: 50%;
-  transform: translateX(-50%); /* 完全に中央に */
-  padding: 10px 20px;
-  font-size: 16px;
+.easter:hover {
+  opacity: 1;
+}
+
+.easter-btn {
+  background: transparent !important;
+  border: 1px solid #666 !important;
+  color: #666 !important;
+  font-size: 12px !important;
+  padding: 5px 10px !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.easter-btn:hover {
+  background: rgba(0, 0, 0, 0.1) !important;
+  transform: scale(1.05);
 }
